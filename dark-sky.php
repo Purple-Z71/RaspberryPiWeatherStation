@@ -32,14 +32,14 @@ class Forecast
 }
 
 // Add your API key here
-$forecast = new Forecast("https://api.darksky.net/forecast/cda5c006ac99037fd8c3017443f238a9");
+$forecast = new Forecast("cda5c006ac99037fd8c3017443f238a9");
 
 // Set timezone
 date_default_timezone_set('America/Chicago');
 $date = new DateTime();
 
 // Get the forecast at a given time - default coordinates Times Square
-$data = json_encode($forecast->get('38.6270, 90.1994'));
+$data = json_encode($forecast->get('38.654084, -90.247183'));
 echo header("Access-Control-Allow-Origin: *");
 echo $data;
 
